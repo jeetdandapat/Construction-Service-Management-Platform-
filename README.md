@@ -1,1 +1,1 @@
-npm instal and npm run dev
+npm Install and npm run dev
