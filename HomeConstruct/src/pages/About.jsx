@@ -6,7 +6,7 @@ export default function AboutSection() {
     <section className="py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Image */}
-        <div className="lg:w-1/2 w-full rounded-2xl overflow-hidden shadow-lg">
+        <div className=" reveal lg:w-1/2 w-full rounded-2xl overflow-hidden shadow-lg">
           <img
             src={AboutImage}
             alt="About BuildHub"
@@ -15,7 +15,7 @@ export default function AboutSection() {
         </div>
 
         {/* Text Content */}
-        <div className="lg:w-1/2 w-full">
+        <div className=" reveal lg:w-1/2 w-full">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
             About BuildHub
           </h2>

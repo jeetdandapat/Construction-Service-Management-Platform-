@@ -6,6 +6,7 @@ import AboutSection from "./About.jsx";
 import Contact from "./Contact.jsx";
 import ServicesPage from "./Services.jsx";
 
+
 export default function Home() {
   return (
     <div className="w-full min-h-screen bg-white">

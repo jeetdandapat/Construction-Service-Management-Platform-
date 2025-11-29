@@ -26,12 +26,12 @@ const userSteps = [
 
 export default function HowUserUses() {
   return (
-    <section className="py-20 px-6 bg-gray-100">
+    <section className=" reveal py-20 px-6 bg-gray-100">
       <h2 className="text-2xl md:text-5xl font-extrabold text-center text-gray-800 mb-16">
         How Users Use BuildHub
       </h2>
 
-      <div className="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
+      <div className="reveal max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
         {userSteps.map((step, index) => (
          <div
           key={index}

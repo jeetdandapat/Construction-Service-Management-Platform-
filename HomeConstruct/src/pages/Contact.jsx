@@ -19,20 +19,20 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className=" reveal py-20 px-6 bg-gray-50">
+      <div className=" reveal max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 text-center mb-12">
           Contact Us
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className=" reveal grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="flex flex-col justify-center gap-6">
-            <div className="flex items-center gap-4">
+          <div className=" reveal flex flex-col justify-center gap-6">
+            <div className=" reveal flex items-center gap-4">
               <FaMapMarkerAlt className="text-blue-600 text-2xl" />
               <p className="text-gray-700 text-lg">123 BuildHub Street, City, Country</p>
             </div>
-            <div className="flex items-center gap-4">
+            <div className=" reveal flex items-center gap-4">
               <FaPhoneAlt className="text-blue-600 text-2xl" />
               <p className="text-gray-700 text-lg">+91 123 456 7890</p>
             </div>

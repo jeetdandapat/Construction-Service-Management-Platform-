@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import UserDashboard from "./UserDashboard";
-import BuyMaterials from "./Bookings/BuyMaterials";
+import BuyMaterials from "./Bookings/BuildingMaterialsHome/BuyMaterials";
 import BookMason from "./Bookings/BookMason";
 import BookLabour from "./Bookings/BookLabour";
 import HireEngineer from "./Bookings/HireEngineer";

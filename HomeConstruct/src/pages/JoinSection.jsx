@@ -66,17 +66,17 @@ export default function JoinSection() {
   };
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className=" reveal py-16 px-6 bg-gray-50">
       {/* Heading */}
-      <h2 className="text-center text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
+      <h2 className=" reveal text-center text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
         Join BuildHub
       </h2>
-      <p className="text-center text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+      <p className=" reveal text-center text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
         Connect with skilled professionals, dealers, and engineers to build your dream home seamlessly. Choose your role and get started today!
       </p>
 
       {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className=" reveal max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {roles.map((role, index) => (
           <div
             key={index}
@@ -90,16 +90,16 @@ export default function JoinSection() {
             `}
           >
             {/* Image */}
-            <div className="h-64 w-full overflow-hidden rounded-t-2xl">
+            <div className=" reveal h-64 w-full overflow-hidden rounded-t-2xl">
               <img
                 src={role.img}
                 alt={role.title}
-                className="w-full h-full object-cover"
+                className=" reveal w-full h-full object-cover"
               />
             </div>
 
             {/* Text Content */}
-            <div className="p-5">
+            <div className=" reveal p-5">
               <h3 className="text-xl font-semibold text-gray-900 mb-1">
                 {role.title}
               </h3>
