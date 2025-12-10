@@ -59,7 +59,7 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center text-white font-bold">
               📄
             </div>
-            <h1 className="text-xl font-semibold text-black">BuildHub</h1>
+            <h1 className="text-xl font-semibold text-black">EasyBuild</h1>
           </div>
 
           {/* Desktop Language Dropdown */}

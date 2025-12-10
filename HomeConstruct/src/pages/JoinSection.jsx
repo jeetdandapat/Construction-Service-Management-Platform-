@@ -69,7 +69,7 @@ export default function JoinSection() {
     <section className=" reveal py-16 px-6 bg-gray-50">
       {/* Heading */}
       <h2 className=" reveal text-center text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
-        Join BuildHub
+        Join EasyBuild
       </h2>
       <p className=" reveal text-center text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
         Connect with skilled professionals, dealers, and engineers to build your dream home seamlessly. Choose your role and get started today!

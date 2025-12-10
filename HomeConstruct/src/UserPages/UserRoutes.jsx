@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import UserDashboard from "./UserDashboard";
 import BuyMaterials from "./Bookings/BuildingMaterialsHome/BuyMaterials";
-import BookMason from "./Bookings/BookMason";
-import BookLabour from "./Bookings/BookLabour";
-import HireEngineer from "./Bookings/HireEngineer";
+import BookMason from "./Bookings/BooksHomeWorkers/BookMason";
+import BookLabour from "./Bookings/BookLabour/BookLabour";
+import HireEngineer from "./Bookings/HireCivilEngineer/HireEngineer";
 import HireArchitect from "./Bookings/HireArchitect";
 import MyOrders from "./Bookings/MyOrders";
 import Profile from "./Bookings/Profile"; // ✅ Added profile page

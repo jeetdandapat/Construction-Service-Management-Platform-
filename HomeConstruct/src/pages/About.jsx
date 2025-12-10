@@ -17,7 +17,7 @@ export default function AboutSection() {
         {/* Text Content */}
         <div className=" reveal lg:w-1/2 w-full">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-            About BuildHub
+            About EasyBuild
           </h2>
           <p className="text-gray-700 text-lg mb-4">
             BuildHub is a modern construction and service management platform that

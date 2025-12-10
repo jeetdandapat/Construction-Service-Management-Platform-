@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand Section */}
         <div>
-          <h3 className="text-3xl font-bold mb-3 text-teal-400">BuildHub</h3>
+          <h3 className="text-3xl font-bold mb-3 text-teal-400">EasyBuild</h3>
           <p className="text-gray-400">
             Connecting homeowners with skilled professionals and quality materials to build dream homes.
           </p>

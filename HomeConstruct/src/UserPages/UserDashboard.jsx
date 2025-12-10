@@ -56,7 +56,7 @@ export default function UserDashboard() {
           <div className="w-9 h-9 rounded-xl bg-blue-500 flex items-center justify-center shadow-md">
             <LayoutDashboard className="w-5 h-5 text-white" />
           </div>
-          <h1 className="text-lg font-bold text-blue-600">BuildHub</h1>
+          <h1 className="text-lg font-bold text-blue-600">EasyBuild</h1>
         </div>
 
         <nav className="flex-1 overflow-y-auto p-3 space-y-1">
@@ -96,7 +96,7 @@ export default function UserDashboard() {
         }`}
       >
         <div className="p-6 flex items-center justify-between border-b border-gray-200">
-          <h1 className="text-lg font-bold text-blue-600">BuildHub</h1>
+          <h1 className="text-lg font-bold text-blue-600">EasyBuild</h1>
           <button onClick={() => setSidebarOpen(false)} className="text-gray-600 hover:text-gray-900">
             <X className="w-5 h-5" />
           </button>
@@ -136,7 +136,7 @@ export default function UserDashboard() {
             <button onClick={() => setSidebarOpen(true)}>
               <Menu className="w-6 h-6 text-gray-800" />
             </button>
-            <h1 className="text-lg font-bold text-blue-600">BuildHub</h1>
+            <h1 className="text-lg font-bold text-blue-600">EasyBuild</h1>
           </div>
           <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
             <User className="w-5 h-5 text-white" />
