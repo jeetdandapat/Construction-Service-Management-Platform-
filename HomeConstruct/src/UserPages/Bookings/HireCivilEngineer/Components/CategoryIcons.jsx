@@ -1,68 +1,93 @@
-import React, { useState } from "react";
+import { 
+  Building2, 
+  HardHat, 
+  Calculator, 
+  Ruler, 
+  Cuboid, 
+  FileCheck, 
+  Compass, 
+  MapPin, 
+  LayoutGrid,
+  ShieldCheck,
+  ArrowRight
+} from "lucide-react";
 
-export default function CategoryIcons({ categoryIcons }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+const categories = [
+  { icon: Building2, title: "Structural Engineer", description: "Load calculation & RCC design" },
+  { icon: HardHat, title: "Site Supervisor", description: "Daily work monitoring" },
+  { icon: Calculator, title: "Estimation & BOQ", description: "Cost & quantity estimation" },
+  { icon: Ruler, title: "Architectural Planning", description: "Floor plans & layouts" },
+  { icon: Cuboid, title: "3D Elevation Designer", description: "Modern elevation designs" },
+  { icon: FileCheck, title: "RCC Drawing Specialist", description: "Structural drawings" },
+  { icon: Compass, title: "Vastu Consultant", description: "Traditional design guidance" },
+  { icon: MapPin, title: "Survey Engineer", description: "Land survey & marking" },
+  { icon: LayoutGrid, title: "Interior Layout Planning", description: "Space optimization" },
+  { icon: ShieldCheck, title: "Quality Checker", description: "Construction inspection" },
+];
 
+const CategorySection = () => {
   return (
-    <div className="reveal max-w-6xl mx-auto mt-4 px-4">
-      <div className="flex gap-6 overflow-x-auto p-4 bg-white shadow-md rounded-2xl">
+    <section className="py-16 md:py-20 px-4 bg-[#F4F7FA]">
+      <div className="container mx-auto">
 
-        {categoryIcons.map((item, idx) => {
-          const isActive = activeIndex === idx;
+        {/* Header */}
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <h2 className="text-3xl font-bold text-[#0D0D0D]">
+              Civil Engineering Services
+            </h2>
+            <p className="text-[#6B6E72]">
+              Find the right expert for your construction needs
+            </p>
+          </div>
 
-          return (
+          <button className="hidden md:flex items-center gap-2 text-[#FF8A00] font-semibold hover:gap-3 transition-all">
+            View All
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* HORIZONTAL SCROLL ROW */}
+        <div className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide">
+          {categories.map((category) => (
             <div
-              key={idx}
-              className="flex flex-col items-center group cursor-pointer transition-all duration-300"
-              onClick={() => setActiveIndex(idx)}
+              key={category.title}
+              className="
+                min-w-[240px] md:min-w-[260px]
+                rounded-[24px] p-6 
+                bg-[#FFF3E8] 
+                shadow-md hover:shadow-lg 
+                transition-all cursor-pointer
+                flex-shrink-0
+              "
             >
-
-              {/* ICON CIRCLE */}
-              <div
-                className={`
-                  w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300
-                  shadow-sm border 
-                  group-hover:scale-110 group-hover:shadow-md
-                  ${isActive 
-                    ? "bg-blue-50 border-blue-500 shadow-blue-300 shadow-md" 
-                    : "bg-slate-50 border-gray-300 group-hover:border-blue-400"
-                  }
-                `}
-                style={{
-                  boxShadow: isActive
-                    ? "0 4px 12px rgba(59,130,246,0.4)"
-                    : "0 2px 5px rgba(0,0,0,0.08)"
-                }}
-              >
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="w-10 h-10 object-contain p-1 transition-all duration-300 
-                  group-hover:scale-125 group-hover:rotate-6"
-                />
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-full bg-[#FFE2C7] flex items-center justify-center mb-4">
+                <category.icon className="w-6 h-6 text-[#FF8A00]" />
               </div>
 
-              {/* LABEL */}
-              <span
-                className={`
-                  text-[12px] mt-2 transition-all duration-300
-                  ${isActive ? "text-blue-600 font-bold" : "text-gray-700"}
-                  group-hover:text-blue-600 group-hover:font-semibold
-                `}
-              >
-                {item.label}
-              </span>
+              {/* Title */}
+              <h3 className="font-semibold text-[#0D0D0D] text-lg mb-1">
+                {category.title}
+              </h3>
 
-              {/* BLUE UNDERLINE FOR ACTIVE */}
-              {isActive && (
-                <div className="w-12 h-1 bg-blue-600 mt-1 rounded-full transition-all duration-300 group-hover:w-14"></div>
-              )}
+              {/* Description */}
+              <p className="text-sm text-[#5F6266] mb-4">
+                {category.description}
+              </p>
 
+              {/* Explore */}
+              <div className="text-[#FF8A00] font-medium flex items-center gap-1 text-sm">
+                Explore
+                <ArrowRight className="w-4 h-4" />
+              </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
 
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default CategorySection;

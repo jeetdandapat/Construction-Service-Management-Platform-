@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
+import { HiBuildingOffice2 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
@@ -16,7 +17,6 @@ export default function Navbar() {
     "ਪੰਜਾਬੀ", "Español", "Français"
   ];
 
-  // Smooth scroll to a section on the same page
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -25,11 +25,11 @@ export default function Navbar() {
     }
   };
 
-  // Auto-highlight active section while scrolling
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "services", "contact", "join"];
       const scrollPos = window.scrollY + 100;
+
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && scrollPos >= section.offsetTop) {
@@ -38,6 +38,7 @@ export default function Navbar() {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,24 +46,25 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm border-b">
       <div className="flex justify-between items-center h-16 px-4 md:px-8">
+
         {/* Logo + Language */}
         <div className="flex items-center space-x-3">
-          {/* Clickable Logo */}
+          {/* Logo */}
           <div
             onClick={() => {
-              navigate("/"); // Always go to home page
+              navigate("/");
               setMenuOpen(false);
-              window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition"
           >
-            <div className="w-8 h-8 bg-blue-500 rounded-md flex items-center justify-center text-white font-bold">
-              📄
+            <div className="w-9 h-9 bg-blue-600 rounded-md flex items-center justify-center text-white">
+              <HiBuildingOffice2 className="w-6 h-6" />
             </div>
             <h1 className="text-xl font-semibold text-black">EasyBuild</h1>
           </div>
 
-          {/* Desktop Language Dropdown */}
+          {/* Desktop Language */}
           <div className="relative hidden md:block z-50">
             <button
               onClick={() => setLanguageOpen(!languageOpen)}
@@ -70,8 +72,9 @@ export default function Navbar() {
             >
               {selectedLanguage} <HiChevronDown className="w-4 h-4" />
             </button>
+
             {languageOpen && (
-              <ul className="absolute left-0 mt-2 w-36 bg-gray-50 border border-gray-300 rounded-md shadow-lg z-50">
+              <ul className="absolute left-0 mt-2 w-36 bg-gray-50 border border-gray-300 rounded-md shadow-lg">
                 {languages.map((lang) => (
                   <li
                     key={lang}
@@ -95,12 +98,13 @@ export default function Navbar() {
             <button
               key={section}
               onClick={() => {
-                // Always navigate to home first before scrolling
                 navigate("/");
                 setTimeout(() => scrollToSection(section), 200);
               }}
               className={`${
-                activeSection === section ? "text-blue-600 font-bold" : "text-black"
+                activeSection === section
+                  ? "text-blue-600 font-bold"
+                  : "text-black"
               } hover:text-blue-600 transition`}
             >
               {section === "join"
@@ -114,37 +118,11 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center space-x-2">
-          {/* Mobile Language Dropdown */}
-          <div className="relative z-50">
-            <button
-              onClick={() => setLanguageOpen(!languageOpen)}
-              className="px-2 py-1 rounded-lg border border-gray-300 text-black hover:bg-gray-100 transition flex items-center gap-1"
-            >
-              {selectedLanguage} <HiChevronDown className="w-4 h-4" />
-            </button>
-            {languageOpen && (
-              <ul className="absolute top-12 left-0 w-36 bg-gray-50 border border-gray-300 rounded-md shadow-lg z-50">
-                {languages.map((lang) => (
-                  <li
-                    key={lang}
-                    className="px-4 py-2 hover:bg-gray-200 cursor-pointer text-black font-medium"
-                    onClick={() => {
-                      setSelectedLanguage(lang);
-                      setLanguageOpen(false);
-                    }}
-                  >
-                    {lang}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-black focus:outline-none"
+            className="text-black"
           >
             {menuOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
           </button>
@@ -163,7 +141,9 @@ export default function Navbar() {
                     setTimeout(() => scrollToSection(section), 200);
                   }}
                   className={`w-full text-left ${
-                    activeSection === section ? "text-blue-600 font-bold" : "text-black"
+                    activeSection === section
+                      ? "text-blue-600 font-bold"
+                      : "text-black"
                   } hover:text-blue-600 font-medium`}
                 >
                   {section === "join"

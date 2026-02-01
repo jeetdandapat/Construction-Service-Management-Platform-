@@ -123,9 +123,9 @@ const stillLooking = [
         <SearchBar />
         <CategoryIcons categoryIcons={categoryIcons} />
         <FeaturedBanner />
-        <StillLooking stillLooking={stillLooking} />
-        <PopularItems popular={popular} />
-        <PopularItems popular={popular} />
+        {/* <StillLooking stillLooking={stillLooking} /> */}
+        {/* <PopularItems popular={popular} /> */}
+        {/* <PopularItems popular={popular} /> */}
 
       </div>
 

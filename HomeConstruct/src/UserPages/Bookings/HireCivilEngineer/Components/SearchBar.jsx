@@ -13,40 +13,58 @@ export default function SearchBar() {
   ];
 
   return (
-    <section className="relative z-20 -mt-10 px-4">
+    <section className="relative z-20 px-4 mt-6">
       <div className="max-w-4xl mx-auto">
 
         {/* Main Search Box */}
         <div
           className={`
-            bg-card rounded-2xl border border-border/40 shadow-md
+            bg-white rounded-2xl border-2 border-blue-300 shadow-lg
             transition-all duration-300 ease-out
-            ${isFocused ? "shadow-xl scale-[1.02] border-primary/40" : ""}
+            ${isFocused ? "shadow-2xl scale-[1.02] border-blue-500" : ""}
           `}
         >
-          <div className="flex items-center gap-4 p-4 md:p-5">
+          <div className="flex items-center gap-4 p-5">
 
-            {/* ICON LEFT */}
+            {/* SEARCH ICON */}
             <div
               className={`
                 p-3 rounded-xl transition-all duration-300
-                ${isFocused
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground"
+                ${
+                  isFocused
+                    ? "bg-blue-600 text-white shadow-lg"
+                    : "bg-blue-100 text-blue-600 shadow-sm"
                 }
               `}
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-6 h-6" />
             </div>
 
-            {/* INPUT FIELD */}
-            <input
-              type="text"
-              placeholder="Search Civil Engineer, Site Supervisor, Estimator, Structural Design Expert…"
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-              className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground text-base md:text-lg outline-none"
-            />
+            {/* INPUT FIELD WITH BLACK BORDER */}
+            <div
+              className={`
+                flex-1 rounded-xl px-4 py-2
+                border-2 transition-all duration-300
+                ${
+                  isFocused
+                    ? "border-black bg-blue-50/30"
+                    : "border-black bg-white"
+                }
+              `}
+            >
+              <input
+                type="text"
+                placeholder="Search Civil Engineer, Site Supervisor, Estimator, Structural Design Expert…"
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+                className="
+                  w-full bg-transparent
+                  text-[#0f172a] text-lg font-medium
+                  placeholder:text-[#64748b]
+                  outline-none
+                "
+              />
+            </div>
 
             {/* FILTER BUTTON */}
             <button
@@ -54,12 +72,12 @@ export default function SearchBar() {
                 p-3 rounded-xl border transition-all duration-300
                 ${
                   isFocused
-                    ? "border-primary/40 bg-accent text-accent-foreground"
-                    : "border-border bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "border-blue-400 bg-blue-100 text-blue-700 shadow-md"
+                    : "border-blue-200 bg-blue-50 text-blue-500 hover:bg-blue-100"
                 }
               `}
             >
-              <SlidersHorizontal className="w-5 h-5" />
+              <SlidersHorizontal className="w-6 h-6" />
             </button>
           </div>
 
@@ -69,9 +87,11 @@ export default function SearchBar() {
               <button
                 key={tag}
                 className="
-                  px-4 py-1.5 rounded-full bg-accent text-accent-foreground 
-                  text-sm font-medium transition-all duration-200
-                  hover:bg-primary hover:text-primary-foreground
+                  px-4 py-1.5 rounded-full 
+                  bg-teal-500 text-white 
+                  text-sm font-semibold 
+                  transition-all duration-200
+                  hover:bg-blue-600
                 "
               >
                 {tag}
